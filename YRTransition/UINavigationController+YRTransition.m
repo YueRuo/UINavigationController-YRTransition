@@ -16,10 +16,12 @@
         [self.view addYRTransition:transition];
         [self pushViewController:viewController animated:false];
     }else{
+        [self.view setUserInteractionEnabled:false];
         __weak typeof(self) weakSelf=self;
         [self.topViewController.view addYRTransition:transition withView:viewController.view completion:^{
             [viewController.view removeFromSuperview];
             [weakSelf pushViewController:viewController animated:false];
+            [weakSelf.view setUserInteractionEnabled:true];
         }];
     }
 }
@@ -34,11 +36,13 @@
         [self.view addYRTransition:transition];
         return [self popViewControllerAnimated:false];
     }else{
+        [self.view setUserInteractionEnabled:false];
         UIViewController *popedViewController=[[self viewControllers]objectAtIndex:count-1];
         UIViewController *nextViewController=[[self viewControllers]objectAtIndex:count-2];
         __weak typeof(self) weakSelf=self;
         [popedViewController.view addYRTransition:transition withView:nextViewController.view completion:^{
             [weakSelf popViewControllerAnimated:false];
+            [weakSelf.view setUserInteractionEnabled:true];
         }];
         return popedViewController;
     }
@@ -62,6 +66,7 @@
         [self.view addYRTransition:transition];
         return [self popToViewController:viewController animated:false];
     }else{
+        [self.view setUserInteractionEnabled:false];
         NSMutableArray *popedViewControllers=[NSMutableArray arrayWithCapacity:popedCount];
         for (NSInteger i=nextIndex+1; i<count; i++) {
             [popedViewControllers addObject:[[self viewControllers] objectAtIndex:i]];
@@ -70,6 +75,7 @@
         __weak typeof(self) weakSelf=self;
         [self.topViewController.view addYRTransition:transition withView:nextViewController.view completion:^{
             [weakSelf popToViewController:viewController animated:false];
+            [weakSelf.view setUserInteractionEnabled:true];
         }];
         return popedViewControllers;
     }
