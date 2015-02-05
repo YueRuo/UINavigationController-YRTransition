@@ -19,10 +19,18 @@
 		5F22F96919519655009CCD38 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F22F95119519655009CCD38 /* UIKit.framework */; };
 		5F22F97119519655009CCD38 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5F22F96F19519655009CCD38 /* InfoPlist.strings */; };
 		5F22F97319519655009CCD38 /* YRTransitionDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F22F97219519655009CCD38 /* YRTransitionDemoTests.m */; };
-		5F22F98319519666009CCD38 /* UINavigationController+YRTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F22F97E19519666009CCD38 /* UINavigationController+YRTransition.m */; };
-		5F22F98419519666009CCD38 /* UIView+YRTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F22F98019519666009CCD38 /* UIView+YRTransition.m */; };
-		5F22F98519519666009CCD38 /* YRTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F22F98219519666009CCD38 /* YRTransition.m */; };
 		5F22F98819519687009CCD38 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F22F98719519687009CCD38 /* RootViewController.m */; };
+		5F441E2D1A821EDE008DE1A2 /* UINavigationController+YRTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F441E151A821EDE008DE1A2 /* UINavigationController+YRTransition.m */; };
+		5F441E2E1A821EDE008DE1A2 /* UIView+YRTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F441E171A821EDE008DE1A2 /* UIView+YRTransition.m */; };
+		5F441E2F1A821EDE008DE1A2 /* UIViewController+YRTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F441E191A821EDE008DE1A2 /* UIViewController+YRTransition.m */; };
+		5F441E301A821EDE008DE1A2 /* UINavigationController+YRBackGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F441E1C1A821EDE008DE1A2 /* UINavigationController+YRBackGesture.m */; };
+		5F441E311A821EDE008DE1A2 /* YRTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F441E1E1A821EDE008DE1A2 /* YRTransition.m */; };
+		5F441E321A821EDE008DE1A2 /* UINavigationController+YRVCTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F441E211A821EDE008DE1A2 /* UINavigationController+YRVCTransition.m */; };
+		5F441E331A821EDE008DE1A2 /* UIViewController+YRVCTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F441E231A821EDE008DE1A2 /* UIViewController+YRVCTransition.m */; };
+		5F441E341A821EDE008DE1A2 /* YRPercentDrivenInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F441E251A821EDE008DE1A2 /* YRPercentDrivenInteractiveTransition.m */; };
+		5F441E351A821EDE008DE1A2 /* YRVCTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F441E281A821EDE008DE1A2 /* YRVCTransition.m */; };
+		5F441E361A821EDE008DE1A2 /* YRVCTransitionCube.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F441E2A1A821EDE008DE1A2 /* YRVCTransitionCube.m */; };
+		5F441E371A821EDE008DE1A2 /* YRVCTransitionMoveIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F441E2C1A821EDE008DE1A2 /* YRVCTransitionMoveIn.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,14 +60,31 @@
 		5F22F96E19519655009CCD38 /* YRTransitionDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "YRTransitionDemoTests-Info.plist"; sourceTree = "<group>"; };
 		5F22F97019519655009CCD38 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5F22F97219519655009CCD38 /* YRTransitionDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YRTransitionDemoTests.m; sourceTree = "<group>"; };
-		5F22F97D19519666009CCD38 /* UINavigationController+YRTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+YRTransition.h"; sourceTree = "<group>"; };
-		5F22F97E19519666009CCD38 /* UINavigationController+YRTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+YRTransition.m"; sourceTree = "<group>"; };
-		5F22F97F19519666009CCD38 /* UIView+YRTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YRTransition.h"; sourceTree = "<group>"; };
-		5F22F98019519666009CCD38 /* UIView+YRTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YRTransition.m"; sourceTree = "<group>"; };
-		5F22F98119519666009CCD38 /* YRTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRTransition.h; sourceTree = "<group>"; };
-		5F22F98219519666009CCD38 /* YRTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YRTransition.m; sourceTree = "<group>"; };
 		5F22F98619519687009CCD38 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		5F22F98719519687009CCD38 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		5F441E141A821EDE008DE1A2 /* UINavigationController+YRTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+YRTransition.h"; sourceTree = "<group>"; };
+		5F441E151A821EDE008DE1A2 /* UINavigationController+YRTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+YRTransition.m"; sourceTree = "<group>"; };
+		5F441E161A821EDE008DE1A2 /* UIView+YRTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YRTransition.h"; sourceTree = "<group>"; };
+		5F441E171A821EDE008DE1A2 /* UIView+YRTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YRTransition.m"; sourceTree = "<group>"; };
+		5F441E181A821EDE008DE1A2 /* UIViewController+YRTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+YRTransition.h"; sourceTree = "<group>"; };
+		5F441E191A821EDE008DE1A2 /* UIViewController+YRTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+YRTransition.m"; sourceTree = "<group>"; };
+		5F441E1B1A821EDE008DE1A2 /* UINavigationController+YRBackGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+YRBackGesture.h"; sourceTree = "<group>"; };
+		5F441E1C1A821EDE008DE1A2 /* UINavigationController+YRBackGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+YRBackGesture.m"; sourceTree = "<group>"; };
+		5F441E1D1A821EDE008DE1A2 /* YRTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRTransition.h; sourceTree = "<group>"; };
+		5F441E1E1A821EDE008DE1A2 /* YRTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YRTransition.m; sourceTree = "<group>"; };
+		5F441E201A821EDE008DE1A2 /* UINavigationController+YRVCTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+YRVCTransition.h"; sourceTree = "<group>"; };
+		5F441E211A821EDE008DE1A2 /* UINavigationController+YRVCTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+YRVCTransition.m"; sourceTree = "<group>"; };
+		5F441E221A821EDE008DE1A2 /* UIViewController+YRVCTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+YRVCTransition.h"; sourceTree = "<group>"; };
+		5F441E231A821EDE008DE1A2 /* UIViewController+YRVCTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+YRVCTransition.m"; sourceTree = "<group>"; };
+		5F441E241A821EDE008DE1A2 /* YRPercentDrivenInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRPercentDrivenInteractiveTransition.h; sourceTree = "<group>"; };
+		5F441E251A821EDE008DE1A2 /* YRPercentDrivenInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YRPercentDrivenInteractiveTransition.m; sourceTree = "<group>"; };
+		5F441E271A821EDE008DE1A2 /* YRVCTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRVCTransition.h; sourceTree = "<group>"; };
+		5F441E281A821EDE008DE1A2 /* YRVCTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YRVCTransition.m; sourceTree = "<group>"; };
+		5F441E291A821EDE008DE1A2 /* YRVCTransitionCube.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRVCTransitionCube.h; sourceTree = "<group>"; };
+		5F441E2A1A821EDE008DE1A2 /* YRVCTransitionCube.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YRVCTransitionCube.m; sourceTree = "<group>"; };
+		5F441E2B1A821EDE008DE1A2 /* YRVCTransitionMoveIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRVCTransitionMoveIn.h; sourceTree = "<group>"; };
+		5F441E2C1A821EDE008DE1A2 /* YRVCTransitionMoveIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YRVCTransitionMoveIn.m; sourceTree = "<group>"; };
+		5F441E381A82205C008DE1A2 /* YRTransitionKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YRTransitionKit.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +144,7 @@
 		5F22F95319519655009CCD38 /* YRTransitionDemo */ = {
 			isa = PBXGroup;
 			children = (
-				5F22F97C19519666009CCD38 /* YRTransition */,
+				5F441E121A821EDE008DE1A2 /* YRTransition */,
 				5F22F95C19519655009CCD38 /* AppDelegate.h */,
 				5F22F95D19519655009CCD38 /* AppDelegate.m */,
 				5F22F95F19519655009CCD38 /* Images.xcassets */,
@@ -159,18 +184,66 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		5F22F97C19519666009CCD38 /* YRTransition */ = {
+		5F441E121A821EDE008DE1A2 /* YRTransition */ = {
 			isa = PBXGroup;
 			children = (
-				5F22F97D19519666009CCD38 /* UINavigationController+YRTransition.h */,
-				5F22F97E19519666009CCD38 /* UINavigationController+YRTransition.m */,
-				5F22F97F19519666009CCD38 /* UIView+YRTransition.h */,
-				5F22F98019519666009CCD38 /* UIView+YRTransition.m */,
-				5F22F98119519666009CCD38 /* YRTransition.h */,
-				5F22F98219519666009CCD38 /* YRTransition.m */,
+				5F441E381A82205C008DE1A2 /* YRTransitionKit.h */,
+				5F441E131A821EDE008DE1A2 /* YRTransition */,
+				5F441E1F1A821EDE008DE1A2 /* YRVCTransition */,
 			);
-			name = YRTransition;
-			path = ../../YRTransition;
+			path = YRTransition;
+			sourceTree = "<group>";
+		};
+		5F441E131A821EDE008DE1A2 /* YRTransition */ = {
+			isa = PBXGroup;
+			children = (
+				5F441E1A1A821EDE008DE1A2 /* YRBackGesture */,
+				5F441E141A821EDE008DE1A2 /* UINavigationController+YRTransition.h */,
+				5F441E151A821EDE008DE1A2 /* UINavigationController+YRTransition.m */,
+				5F441E181A821EDE008DE1A2 /* UIViewController+YRTransition.h */,
+				5F441E191A821EDE008DE1A2 /* UIViewController+YRTransition.m */,
+				5F441E161A821EDE008DE1A2 /* UIView+YRTransition.h */,
+				5F441E171A821EDE008DE1A2 /* UIView+YRTransition.m */,
+				5F441E1D1A821EDE008DE1A2 /* YRTransition.h */,
+				5F441E1E1A821EDE008DE1A2 /* YRTransition.m */,
+			);
+			path = YRTransition;
+			sourceTree = "<group>";
+		};
+		5F441E1A1A821EDE008DE1A2 /* YRBackGesture */ = {
+			isa = PBXGroup;
+			children = (
+				5F441E1B1A821EDE008DE1A2 /* UINavigationController+YRBackGesture.h */,
+				5F441E1C1A821EDE008DE1A2 /* UINavigationController+YRBackGesture.m */,
+			);
+			path = YRBackGesture;
+			sourceTree = "<group>";
+		};
+		5F441E1F1A821EDE008DE1A2 /* YRVCTransition */ = {
+			isa = PBXGroup;
+			children = (
+				5F441E201A821EDE008DE1A2 /* UINavigationController+YRVCTransition.h */,
+				5F441E211A821EDE008DE1A2 /* UINavigationController+YRVCTransition.m */,
+				5F441E221A821EDE008DE1A2 /* UIViewController+YRVCTransition.h */,
+				5F441E231A821EDE008DE1A2 /* UIViewController+YRVCTransition.m */,
+				5F441E241A821EDE008DE1A2 /* YRPercentDrivenInteractiveTransition.h */,
+				5F441E251A821EDE008DE1A2 /* YRPercentDrivenInteractiveTransition.m */,
+				5F441E261A821EDE008DE1A2 /* YRVCTransitioning */,
+			);
+			path = YRVCTransition;
+			sourceTree = "<group>";
+		};
+		5F441E261A821EDE008DE1A2 /* YRVCTransitioning */ = {
+			isa = PBXGroup;
+			children = (
+				5F441E271A821EDE008DE1A2 /* YRVCTransition.h */,
+				5F441E281A821EDE008DE1A2 /* YRVCTransition.m */,
+				5F441E291A821EDE008DE1A2 /* YRVCTransitionCube.h */,
+				5F441E2A1A821EDE008DE1A2 /* YRVCTransitionCube.m */,
+				5F441E2B1A821EDE008DE1A2 /* YRVCTransitionMoveIn.h */,
+				5F441E2C1A821EDE008DE1A2 /* YRVCTransitionMoveIn.m */,
+			);
+			path = YRVCTransitioning;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,12 +341,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F22F98319519666009CCD38 /* UINavigationController+YRTransition.m in Sources */,
+				5F441E341A821EDE008DE1A2 /* YRPercentDrivenInteractiveTransition.m in Sources */,
 				5F22F95E19519655009CCD38 /* AppDelegate.m in Sources */,
 				5F22F98819519687009CCD38 /* RootViewController.m in Sources */,
-				5F22F98519519666009CCD38 /* YRTransition.m in Sources */,
-				5F22F98419519666009CCD38 /* UIView+YRTransition.m in Sources */,
+				5F441E2E1A821EDE008DE1A2 /* UIView+YRTransition.m in Sources */,
+				5F441E361A821EDE008DE1A2 /* YRVCTransitionCube.m in Sources */,
+				5F441E331A821EDE008DE1A2 /* UIViewController+YRVCTransition.m in Sources */,
 				5F22F95A19519655009CCD38 /* main.m in Sources */,
+				5F441E2F1A821EDE008DE1A2 /* UIViewController+YRTransition.m in Sources */,
+				5F441E371A821EDE008DE1A2 /* YRVCTransitionMoveIn.m in Sources */,
+				5F441E301A821EDE008DE1A2 /* UINavigationController+YRBackGesture.m in Sources */,
+				5F441E2D1A821EDE008DE1A2 /* UINavigationController+YRTransition.m in Sources */,
+				5F441E321A821EDE008DE1A2 /* UINavigationController+YRVCTransition.m in Sources */,
+				5F441E351A821EDE008DE1A2 /* YRVCTransition.m in Sources */,
+				5F441E311A821EDE008DE1A2 /* YRTransition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,6 +553,7 @@
 				5F22F97819519655009CCD38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5F22F97919519655009CCD38 /* Build configuration list for PBXNativeTarget "YRTransitionDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -480,6 +562,7 @@
 				5F22F97B19519655009CCD38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

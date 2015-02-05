@@ -9,7 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "YRTransition.h"
 
+/*!
+ *	@brief	最低支持版本iOS4.0，放心使用，内部实现上，对于高于7的方法调用YRVCTransition库，低的则使用CATransiton实现
+ */
 @interface UINavigationController (YRTransition)
+
+-(void)setBackGestureEnable:(BOOL)enable;//启用右滑返回前一界面功能
+
 -(void)pushViewController:(UIViewController *)viewController withYRTransition:(YRTransition*)transition;
 
 -(UIViewController *)popViewControllerWithYRTransition:(YRTransition*)transition;

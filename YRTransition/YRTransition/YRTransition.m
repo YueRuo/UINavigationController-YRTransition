@@ -35,12 +35,14 @@
 }
 
 -(BOOL)isSystemAnimation{
-    switch (_type) {
-        case YRTransitionType_CoverIn:
-        case YRTransitionType_CoverReveal:
-            return false;
-        default:
-            break;
+    if (IOS7_OR_LATER) {
+        switch (_type) {
+            case YRTransitionType_CoverIn:
+            case YRTransitionType_CoverReveal:
+                return false;
+            default:
+                break;
+        }
     }
     return true;
 }

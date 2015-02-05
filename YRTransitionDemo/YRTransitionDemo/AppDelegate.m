@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "RootViewController.h"
+#import "YRTransitionKit.h"
 
 @implementation AppDelegate
 
@@ -21,6 +22,9 @@
     RootViewController *rootViewController=[[RootViewController alloc]initWithNibName:nil bundle:nil];
     UINavigationController *navigationController=[[UINavigationController alloc]initWithRootViewController:rootViewController];
     navigationController.view.backgroundColor=[UIColor brownColor];
+    
+#warning 需要显式调用这一句，才能使自定义动画中iOS7以后的Push、CoverIn和从CoverReveal动画正常使用
+    [navigationController enableTransition];
     self.window.rootViewController=navigationController;
 //    navigationController.navigationBarHidden=true;
     [self.window makeKeyAndVisible];

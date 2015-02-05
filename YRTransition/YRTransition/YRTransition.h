@@ -28,7 +28,7 @@ typedef enum {
 }YRTransitionType;
 
 typedef enum {
-    YRTransitionDirection_FromTop=1,//上
+    YRTransitionDirection_FromTop=0,//上
     YRTransitionDirection_FromLeft,//左
     YRTransitionDirection_FromBottom,//下
     YRTransitionDirection_FromRight,//右

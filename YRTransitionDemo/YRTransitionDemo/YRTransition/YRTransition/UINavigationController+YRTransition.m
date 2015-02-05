@@ -8,21 +8,36 @@
 
 #import "UINavigationController+YRTransition.h"
 #import "UIView+YRTransition.h"
+#import "UINavigationController+YRVCTransition.h"
+#import "YRVCTransitionMoveIn.h"
+#import "UINavigationController+YRBackGesture.h"
+
 
 @implementation UINavigationController (YRTransition)
+
+-(void)enableTransition{
+    if ([[[UIDevice currentDevice] systemVersion]compare:@"7.0"]!=NSOrderedAscending) {
+        [self bindYRTransitionDelegate];
+        self.interactivePopGestureRecognizer.enabled = false;
+    }else{
+        [self setEnableBackGesture:true];
+    }
+}
+-(void)setPanToPreViewEnable:(BOOL)enable{
+    if ([[[UIDevice currentDevice] systemVersion]compare:@"7.0"]!=NSOrderedAscending) {
+        self.interactiveYRTransition = enable?[YRPercentDrivenInteractiveTransition new]:nil;
+    }else{
+        [self setEnableBackGesture:enable];
+    }
+}
 
 -(void)pushViewController:(UIViewController *)viewController withYRTransition:(YRTransition *)transition{
     if ([transition isSystemAnimation]) {
         [self.view addYRTransition:transition];
         [self pushViewController:viewController animated:false];
-    }else{
-        [self.view setUserInteractionEnabled:false];
-        __weak typeof(self) weakSelf=self;
-        [self.topViewController.view addYRTransition:transition withView:viewController.view completion:^{
-            [viewController.view removeFromSuperview];
-            [weakSelf pushViewController:viewController animated:false];
-            [weakSelf.view setUserInteractionEnabled:true];
-        }];
+    }else{//对接iOS7之后的动画库
+        YRVCTransition *moveIn = [transition toVCTransitionPush];
+        [self pushViewController:viewController withYRVCTransition:moveIn];
     }
 }
 
@@ -36,15 +51,8 @@
         [self.view addYRTransition:transition];
         return [self popViewControllerAnimated:false];
     }else{
-        [self.view setUserInteractionEnabled:false];
-        UIViewController *popedViewController=[[self viewControllers]objectAtIndex:count-1];
-        UIViewController *nextViewController=[[self viewControllers]objectAtIndex:count-2];
-        __weak typeof(self) weakSelf=self;
-        [popedViewController.view addYRTransition:transition withView:nextViewController.view completion:^{
-            [weakSelf popViewControllerAnimated:false];
-            [weakSelf.view setUserInteractionEnabled:true];
-        }];
-        return popedViewController;
+        YRVCTransition *vcTransition=[transition toVCTransitionPop];
+        return [self popViewControllerWithYRVCTransition:vcTransition];
     }
 }
 -(NSArray *)popToViewController:(UIViewController *)viewController withYRTransition:(YRTransition *)transition{
@@ -66,18 +74,8 @@
         [self.view addYRTransition:transition];
         return [self popToViewController:viewController animated:false];
     }else{
-        [self.view setUserInteractionEnabled:false];
-        NSMutableArray *popedViewControllers=[NSMutableArray arrayWithCapacity:popedCount];
-        for (NSInteger i=nextIndex+1; i<count; i++) {
-            [popedViewControllers addObject:[[self viewControllers] objectAtIndex:i]];
-        }
-        UIViewController *nextViewController=viewController;
-        __weak typeof(self) weakSelf=self;
-        [self.topViewController.view addYRTransition:transition withView:nextViewController.view completion:^{
-            [weakSelf popToViewController:viewController animated:false];
-            [weakSelf.view setUserInteractionEnabled:true];
-        }];
-        return popedViewControllers;
+        YRVCTransition *vcTransition = [transition toVCTransitionPop];
+        return [self popToViewController:viewController withYRVCTransition:vcTransition];
     }
 }
 -(NSArray *)popToRootViewControllerWithYRTransition:(YRTransition *)transition{

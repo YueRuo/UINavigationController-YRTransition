@@ -10,29 +10,29 @@
 	<string>YRTransitionDemo</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>1004E61D-BFBB-41A9-BE52-55138597ADB2</key>
-		<string>ssh://github.com/YueRuo/UINavigationController-YRTransition.git</string>
+		<key>A9646D46D0B85A6B9F090475E5CAD03658FA3FAD</key>
+		<string>github.com:YueRuo/UINavigationController-YRTransition.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>YRTransitionDemo/YRTransitionDemo.xcodeproj/project.xcworkspace</string>
+	<string>YRTransitionDemo/YRTransitionDemo.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>1004E61D-BFBB-41A9-BE52-55138597ADB2</key>
+		<key>A9646D46D0B85A6B9F090475E5CAD03658FA3FAD</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://github.com/YueRuo/UINavigationController-YRTransition.git</string>
+	<string>github.com:YueRuo/UINavigationController-YRTransition.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>1004E61D-BFBB-41A9-BE52-55138597ADB2</string>
+	<string>A9646D46D0B85A6B9F090475E5CAD03658FA3FAD</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>1004E61D-BFBB-41A9-BE52-55138597ADB2</string>
+			<string>A9646D46D0B85A6B9F090475E5CAD03658FA3FAD</string>
 			<key>IDESourceControlWCCName</key>
 			<string>YRTransition</string>
 		</dict>

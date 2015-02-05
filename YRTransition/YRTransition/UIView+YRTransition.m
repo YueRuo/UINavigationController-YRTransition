@@ -16,77 +16,6 @@
     if (!transition||![transition isKindOfClass:[YRTransition class]]) {
         return;
     }
-    //自定义动画使用viewAnimation
-    
-    //******************************
-    //*-begin-- 自定义动画使用viewAnimation
-    //******************************
-    if (![transition isSystemAnimation]) {
-        if (transition.type==YRTransitionType_CoverIn) {
-            [self.superview addSubview:view];
-            CGRect frame=self.frame;
-            switch (transition.direction) {
-                case YRTransitionDirection_FromBottom:{
-                    frame.origin.y=-self.frame.size.height;
-                    break;}
-                case YRTransitionDirection_FromTop:{
-                    frame.origin.y=self.frame.size.height;
-                    break;}
-                case YRTransitionDirection_FromLeft:{
-                    frame.origin.x=-self.frame.size.width;
-                    break;}
-                case YRTransitionDirection_FromRight:{
-                    frame.origin.x=self.frame.size.width;
-                    break;}
-                default:
-                    break;
-            }
-            view.frame=frame;
-            [UIView animateWithDuration:transition.duration animations:^{
-                view.frame=self.frame;
-            } completion:^(BOOL finished) {
-                view.frame=self.frame;
-                if (completion) {
-                    completion();
-                }
-            }];
-        }else if (transition.type==YRTransitionType_CoverReveal){
-            [self.superview insertSubview:view belowSubview:self];
-            CGRect frame=self.frame;
-            view.frame=self.frame;
-            switch (transition.direction) {
-                case YRTransitionDirection_FromBottom:{
-                    frame.origin.y=self.frame.size.height;
-                    break;}
-                case YRTransitionDirection_FromTop:{
-                    frame.origin.y=-self.frame.size.height;
-                    break;}
-                case YRTransitionDirection_FromLeft:{
-                    frame.origin.x=self.frame.size.width;
-                    break;}
-                case YRTransitionDirection_FromRight:{
-                    frame.origin.x=-self.frame.size.width;
-                    break;}
-                default:
-                    break;
-            }
-            [UIView animateWithDuration:transition.duration animations:^{
-                self.frame=frame;
-            } completion:^(BOOL finished) {
-                self.frame=view.frame;
-                [view removeFromSuperview];
-                [self.superview addSubview:view];
-                if (completion) {
-                    completion();
-                }
-            }];
-        }
-        return;
-    }
-    //----------------------------
-    //-end-- 自定义动画使用viewAnimation
-    //---------------------------
-    
     
     //******************************
     //*-begin-- 系统动画使用CATransition
@@ -103,9 +32,11 @@
             animation.type = kCATransitionPush;
             break;
         case YRTransitionType_Reveal:
+        case YRTransitionType_CoverReveal:
             animation.type = kCATransitionReveal;
             break;
         case YRTransitionType_MoveIn:
+        case YRTransitionType_CoverIn:
             animation.type = kCATransitionMoveIn;
             break;
         case YRTransitionType_Cube:
