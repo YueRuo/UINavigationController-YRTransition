@@ -31,7 +31,7 @@ static const char *assoKeyEnableBackGesture = "assoKeyEnableBackGesture";
 
 -(void)setTransition:(YRVCTransition *)transition{
     objc_setAssociatedObject(self, assoKeyTransition, transition, OBJC_ASSOCIATION_RETAIN);
-    if ([[[UIDevice currentDevice] systemVersion]compare:@"7.0"]!=NSOrderedAscending) {
+    if ([[[UIDevice currentDevice] systemVersion]floatValue]>7.0) {
         self.transitioningDelegate=self;
     }
 }

@@ -16,7 +16,7 @@
 @implementation UINavigationController (YRTransition)
 
 -(void)enableTransition{
-    if ([[[UIDevice currentDevice] systemVersion]compare:@"7.0"]!=NSOrderedAscending) {
+    if ([[[UIDevice currentDevice] systemVersion]floatValue] > 7.0) {
         [self bindYRTransitionDelegate];
         self.interactivePopGestureRecognizer.enabled = false;
     }else{
@@ -24,7 +24,7 @@
     }
 }
 -(void)setPanToPreViewEnable:(BOOL)enable{
-    if ([[[UIDevice currentDevice] systemVersion]compare:@"7.0"]!=NSOrderedAscending) {
+    if ([[[UIDevice currentDevice] systemVersion]floatValue] > 7.0) {
         self.interactiveYRTransition = enable?[YRPercentDrivenInteractiveTransition new]:nil;
     }else{
         [self setEnableBackGesture:enable];

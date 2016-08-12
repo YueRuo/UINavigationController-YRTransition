@@ -35,7 +35,7 @@
 }
 
 -(BOOL)isSystemAnimation{
-    if ([[[UIDevice currentDevice] systemVersion]compare:@"7.0"]!=NSOrderedAscending) {
+    if ([[[UIDevice currentDevice] systemVersion]floatValue]>7.0) {
         switch (_type) {
             case YRTransitionType_Push:
             case YRTransitionType_CoverIn:
