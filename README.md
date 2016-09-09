@@ -36,5 +36,4 @@ A category to help navigationController do pop and push animation
 才能使用相应的动画效果
 并且对于modelViewController的动画也做了相应的封装，方便大家使用。
 
-
-如果大家不想要使用左滑返回上一层的功能，
+PS: 如果最低版本支持iOS7以上，推荐使用另一个单独的YRVCTransition动画库：https://github.com/YueRuo/YRVCTransition
